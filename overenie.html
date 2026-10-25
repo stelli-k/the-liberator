@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overenie odberateľa | The Liberator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="masthead">
+        <p class="founded">ZALOŽENÉ V BOSTONE · 1831</p>
+        <h1>THE LIBERATOR</h1>
+        <p class="motto">OUR COUNTRY IS THE WORLD, OUR COUNTRYMEN ARE ALL MANKIND</p>
+        <div class="edition">OVERENIE ODBERATEĽA · 1859</div>
+    </header>
+
+    <main>
+        <section class="lead-story">
+            <p class="section-label">VERIFIKÁCIA</p>
+            <h2>Potvrďte, že nie ste otrokár</h2>
+
+            <p>
+                Vyberte všetky možnosti, na ktorých sa nachádza motto našich novín:
+            </p>
+
+            <form id="verification-form">
+                <label class="quiz-option">
+                    <input type="radio" name="motto-answer"
+                        value="wrong" required>
+                    Náš pot, ich práca, globálny blahobyt.
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="motto-answer"
+                        value="wrong">
+                    Právo na vlastníctvo je základom civilizácie.
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="motto-answer"
+                        value="correct">
+                    Našou krajinou je svet — naši krajania sú celé ľudstvo.
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="motto-answer"
+                        value="wrong">
+                    Ústava chráni náš majetok, štátne práva našu slobodu.
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="motto-answer"
+                        value="wrong">
+                    Bavlna je kráľ a bez nás koruna padne.
+                </label>
+
+                <button type="submit" class="ad-subscribe">
+                    Potvrdiť odpoveď →
+                </button>
+
+                <p id="quiz-feedback" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        THE LIBERATOR · BOSTON · 1859
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

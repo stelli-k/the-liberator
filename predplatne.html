@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predplatné | The Liberator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="masthead">
+        <p class="founded">ZALOŽENÉ V BOSTONE · 1831</p>
+        <h1>THE LIBERATOR</h1>
+        <p class="motto">OUR COUNTRY IS THE WORLD, OUR COUNTRYMEN ARE ALL MANKIND</p>
+
+        <div class="edition">
+            PREDPLATNÉ · PODPORTE ABOLICIONISTICKÚ TLAČ
+        </div>
+
+        <nav class="navigation">
+            <a href="index.html">Domov</a>
+            <a href="historia.html">História</a>
+            <a href="chronologia.html">Chronológia</a>
+            <a href="dokumenty.html">Dokumenty</a>
+            <a href="rozhovor.html">Rozhovor</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lead-story">
+            <p class="section-label">OZNAM REDAKCIE</p>
+            <h2>Staňte sa odberateľom The Liberator</h2>
+
+            <p class="article-intro">
+                Podporte šírenie myšlienok slobody a rovnosti.
+                Vyberte si predplatné a pokračujte k overeniu.
+            </p>
+
+            <form id="subscription-form">
+                <label for="subscriber-name">Meno:</label>
+                <input
+                    type="text"
+                    id="subscriber-name"
+                    placeholder="Harriet"
+                    required
+                >
+
+                <label for="subscriber-address">Adresa:</label>
+                <input
+                    type="text"
+                    id="subscriber-address"
+                    placeholder="Boston"
+                    required
+                >
+
+                <p><strong>Vyberte si predplatné:</strong></p>
+
+                <label>
+                    <input type="radio" name="plan" value="mesačné" required>
+                    Mesačné predplatné
+                </label>
+
+                <label>
+                    <input type="radio" name="plan" value="ročné">
+                    Ročné predplatné
+                </label>
+
+                <button type="submit" class="ad-subscribe">
+                    Pokračovať k overeniu →
+                </button>
+            </form>
+
+            <p class="source-note">
+                Formulár nič neodosiela ani neukladá.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        THE LIBERATOR · BOSTON · 1859
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
