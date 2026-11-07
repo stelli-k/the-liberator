@@ -1,0 +1,816 @@
+
+/* Základ celej stránky */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #e9e0ce;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Hlavicka novin */
+.masthead {
+    max-width: 1150px;
+    margin: 30px auto 0;
+    padding: 25px 35px;
+    background-color: #f7f1e5;
+    text-align: center;
+    border-top: 5px double #762e2a;
+    border-bottom: 5px double #762e2a;
+}
+
+.founded {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.masthead h1 {
+    margin: 10px 0;
+    font-size: clamp(42px, 8vw, 86px);
+    letter-spacing: 3px;
+    line-height: 1;
+}
+
+.motto {
+    color: #762e2a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.edition {
+    margin: 22px 0 15px;
+    padding: 10px 0;
+    border-top: 1px solid #29251f;
+    border-bottom: 1px solid #29251f;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* Navigacia */
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 25px;
+    padding-top: 10px;
+}
+
+.navigation a {
+    color: #762e2a;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Hlavny obsah */
+main {
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 0 25px;
+}
+
+.lead-story {
+    padding: 30px;
+    background-color: #f7f1e5;
+    border-top: 2px solid #29251f;
+    border-bottom: 1px solid #29251f;
+}
+
+.section-label {
+    color: #762e2a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.lead-story h2 {
+    max-width: 850px;
+    margin: 15px 0;
+    font-size: clamp(28px, 5vw, 48px);
+    line-height: 1.12;
+}
+
+.article-intro {
+    font-size: 17px;
+    font-style: italic;
+}
+
+/* Obsah vydania */
+.inside {
+    margin-top: 35px;
+}
+
+.inside > h2 {
+    padding-bottom: 12px;
+    border-bottom: 3px double #762e2a;
+    font-size: 22px;
+}
+
+.inside-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.inside-grid article {
+    padding: 20px;
+    background-color: #f7f1e5;
+    border-top: 2px solid #762e2a;
+}
+
+.inside-grid h3 {
+    font-size: 21px;
+}
+
+.inside-grid a {
+    color: #762e2a;
+    font-weight: bold;
+}
+
+/* Spodok stranky */
+.footer {
+    padding: 25px;
+    background-color: #29251f;
+    color: #f7f1e5;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Zobrazenie na uzkych obrazovkach */
+@media (max-width: 650px) {
+    .masthead {
+        margin: 10px;
+        padding: 20px 15px;
+    }
+
+    .inside-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lead-story {
+        padding: 20px;
+    }
+}
+
+/* Hlavny clanok — novinova typografia */
+
+.article-meta {
+    margin: 20px 0;
+    font-size: 13px;
+    color: #762e2a;
+}
+
+.lead-story h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 1.25;
+}
+
+.lead-story > p:not(.section-label):not(.article-meta):not(.article-intro):not(.article-conclusion):not(.source-note) {
+    font-size: 16px;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.lead-story hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid #b7a990;
+}
+
+.article-conclusion {
+    margin-top: 25px;
+    padding: 18px;
+    border-top: 3px double #762e2a;
+    border-bottom: 3px double #762e2a;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.source-note {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.source-note a {
+    color: #762e2a;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    color: #762e2a;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #762e2a;
+}
+
+.read-more:hover {
+    color: #29251f;
+    border-bottom-width: 2px;
+}
+
+.full-article {
+    padding: 30px;
+    background-color: #f7f1e5;
+    border-top: 2px solid #29251f;
+}
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    max-height: 450px;
+    object-fit: contain;
+    object-position: left center;
+    margin: 20px 0 30px;
+    border: 1px solid #b7a990;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #762e2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.full-article {
+    padding: 30px;
+    background-color: #f7f1e5;
+    border-top: 2px solid #29251f;
+}
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    max-height: 450px;
+    object-fit: contain;
+    margin: 20px 0 30px;
+    border: 1px solid #b7a990;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #762e2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-meta {
+    color: #762e2a;
+    font-size: 13px;
+}
+
+.full-article h2 {
+    font-size: clamp(28px, 5vw, 46px);
+    line-height: 1.15;
+}
+
+.full-article h3 {
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.full-article > p:not(.section-label):not(.article-meta):not(.article-intro):not(.article-conclusion):not(.source-note) {
+    font-size: 16px;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.full-article hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid #b7a990;
+}
+
+.article-conclusion {
+    margin-top: 25px;
+    padding: 18px;
+    border-top: 3px double #762e2a;
+    border-bottom: 3px double #762e2a;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.source-note {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.source-note a {
+    color: #762e2a;
+}
+
+@media (max-width: 650px) {
+    .full-article {
+        padding: 20px;
+    }
+}
+
+.garrison-quote {
+    margin: 30px 0;
+    padding: 22px 25px;
+    border-left: 4px solid #762e2a;
+    background-color: #eee5d5;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.garrison-quote span {
+    display: block;
+    margin-top: 12px;
+    color: #762e2a;
+    font-size: 13px;
+    font-style: normal;
+}
+
+.history-chapter {
+    padding: 10px 0;
+}
+
+.history-chapter h3 {
+    margin-top: 5px;
+    font-size: 28px;
+}
+
+.history-chapter > p:last-child {
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.full-article > hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #b7a990;
+}
+
+.timeline {
+    position: relative;
+    margin: 35px 0;
+    padding-left: 30px;
+    border-left: 3px double #762e2a;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+    padding: 5px 0 5px 20px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 12px;
+    width: 14px;
+    height: 14px;
+    background-color: #f7f1e5;
+    border: 3px solid #762e2a;
+    border-radius: 50%;
+}
+
+.timeline-year {
+    margin: 0 0 8px;
+    color: #762e2a;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+    font-size: 23px;
+}
+
+.timeline-content p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+@media (max-width: 650px) {
+    .timeline {
+        padding-left: 18px;
+    }
+
+    .timeline-item {
+        padding-left: 15px;
+    }
+
+    .timeline-item::before {
+        left: -27px;
+    }
+}
+
+.document-entry {
+    padding: 10px 0;
+}
+
+.document-entry h3 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.document-entry h4 {
+    margin-top: 25px;
+    font-size: 17px;
+    color: #762e2a;
+}
+
+.document-image {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    max-height: 500px;
+    object-fit: contain;
+    object-position: left center;
+    margin: 20px 0;
+    border: 1px solid #b7a990;
+    background-color: #f7f1e5;
+}
+
+.document-entry > p:not(.source-note) {
+    font-size: 16px;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.historical-document {
+    margin: 20px 0;
+    padding: 25px;
+    background-color: #eee5d5;
+    border-left: 4px solid #762e2a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.document-entry .source-note {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.document-entry .source-note a {
+    color: #762e2a;
+}
+
+.history-figure {
+    margin: 25px 0;
+}
+
+.history-figure figcaption {
+    max-width: 650px;
+    margin-top: 8px;
+    color: #6b6255;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.ad-overlay[hidden] {
+    display: none;
+}
+
+.ad-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(25, 20, 16, 0.72);
+}
+
+.ad-window {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    background: #f7f1e5;
+    color: #29251f;
+    border: 5px double #762e2a;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.ad-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    color: #762e2a;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.ad-image {
+    display: block;
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 15px auto;
+}
+
+.ad-window h2 {
+    color: #762e2a;
+    font-size: 27px;
+    line-height: 1.2;
+}
+
+.ad-window > p:not(.section-label) {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.ad-subscribe {
+    display: block;
+    margin: 22px auto 12px;
+    padding: 13px 18px;
+    background: #762e2a;
+    color: #f7f1e5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ad-subscribe:hover {
+    background: #54201d;
+}
+
+.ad-dismiss {
+    border: 0;
+    background: transparent;
+    color: #62594e;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .ad-window {
+        padding: 25px 20px;
+    }
+}
+
+#subscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+#subscription-form > label:not(:has(input)) {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#subscription-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a79a85;
+    background: #fffaf0;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+}
+
+#subscription-form input[type="radio"] {
+    accent-color: #762e2a;
+    margin-right: 8px;
+}
+
+#subscription-form button {
+    width: 100%;
+    border: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.source-note {
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #62594e;
+}
+
+#verification-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    background: #fffaf0;
+    border: 1px solid #d1c4ad;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.quiz-option input {
+    margin-top: 5px;
+    accent-color: #762e2a;
+    flex-shrink: 0;
+}
+
+#verification-form button {
+    width: 100%;
+    border: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#quiz-feedback {
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.interview-video {
+    position: relative;
+    margin-top: 25px;
+    background: #29251f;
+    overflow: hidden;
+}
+
+.interview-video video {
+    display: block;
+    width: 100%;
+    max-height: 560px;
+    background: #29251f;
+}
+
+.video-lock {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(25, 20, 16, 0.93);
+    color: #f7f1e5;
+    text-align: center;
+}
+
+.video-lock h3 {
+    font-size: clamp(23px, 4vw, 34px);
+}
+
+.video-lock p:not(.section-label) {
+    max-width: 420px;
+    line-height: 1.7;
+}
+
+.video-lock .section-label {
+    color: #d8b7a1;
+}
+
+.video-lock .ad-subscribe {
+    width: 100%;
+    max-width: 300px;
+}
+
+.video-lock[hidden] {
+    display: none;
+}
+
+.secret-clue {
+    margin-top: 35px;
+    padding: 20px;
+    border-top: 1px dashed #762e2a;
+    text-align: center;
+}
+
+.secret-clue .section-label {
+    font-size: 10px;
+}
+
+.secret-clue a {
+    color: #762e2a;
+    font-style: italic;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.secret-clue a:hover {
+    text-decoration: underline;
+}
+
+.railroad-hero {
+    border-top: 5px double #762e2a;
+}
+
+.railroad-divider {
+    margin: 30px 0;
+    color: #762e2a;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+.railroad-section {
+    margin-top: 30px;
+    padding: 30px;
+    background: #f7f1e5;
+    border-top: 2px solid #762e2a;
+}
+
+.railroad-section h2 {
+    font-size: clamp(26px, 4vw, 38px);
+    margin-top: 8px;
+}
+
+.railroad-section > p:not(.section-label) {
+    line-height: 1.8;
+}
+
+.railroad-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.railroad-steps article {
+    padding: 20px;
+    background: #eee3d0;
+    border-top: 3px double #762e2a;
+}
+
+.railroad-number {
+    color: #762e2a;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.railroad-steps h3 {
+    margin-bottom: 8px;
+}
+
+.railroad-steps p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.railroad-note {
+    margin-top: 30px;
+    padding: 25px;
+    border: 1px dashed #762e2a;
+}
+
+.railroad-note blockquote {
+    margin: 20px 0;
+    color: #762e2a;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.railroad-back {
+    margin: 30px 0;
+}
+
+.railroad-back a {
+    color: #762e2a;
+    font-weight: bold;
+}
+
+@media (max-width: 650px) {
+    .railroad-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .railroad-section {
+        padding: 20px;
+    }
+}

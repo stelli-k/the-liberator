@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajná otázka | The Liberator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="masthead">
+        <p class="founded">TAJNÝ ODKAZ · 1859</p>
+        <h1>THE LIBERATOR</h1>
+        <p class="motto">
+            OUR COUNTRY IS THE WORLD, OUR COUNTRYMEN ARE ALL MANKIND
+        </p>
+        <div class="edition">LEN PRE TÝCH, KTORÍ VEDIA HĽADAŤ</div>
+    </header>
+
+    <main>
+        <section class="lead-story">
+            <p class="section-label">ĎALŠIA STOPA</p>
+
+            <h2>Každá cesta má svoj začiatok.</h2>
+
+            <p>
+                Harriet Tubmanová pomohla mnohým zotročeným ľuďom
+                utiecť na slobodu. Predtým, než ju svet poznal pod
+                menom Harriet Tubman, používala iné meno.
+            </p>
+
+            <p><strong>Aké bolo jej pôvodné meno?</strong></p>
+
+            <form id="harriet-form">
+                <label class="quiz-option">
+                    <input type="radio" name="harriet-answer" value="wrong" required>
+                    Sarah Parker
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="harriet-answer" value="correct">
+                    Araminta Ross
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="harriet-answer" value="wrong">
+                    Elizabeth Freeman
+                </label>
+
+                <button type="submit" class="ad-subscribe">
+                    Odhaľte ďalšiu stopu →
+                </button>
+
+                <p id="harriet-feedback" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        THE LIBERATOR · TAJNÁ MISIA
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
